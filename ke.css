@@ -1,0 +1,223 @@
+/* Reset dan Styling dasar */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Tampilkan menu secara horizontal di desktop */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1e7e34;
+    color: #fff;
+}
+
+main {
+    padding: 40px 0;
+}
+
+#welcome {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD700;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffbf00;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        font-size: 28px;
+        text-align: center;
+    }
+    .logo{
+        color: #cbcf00;
+    }
+
+    header h1 {
+        font-size: 14px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        max-height: 0; /* Atur tinggi maksimum ke 0 */
+        overflow: hidden; /* Sembunyikan overflow */
+    }
+
+    nav ul.showing {
+        display: flex;
+        max-height: 500px; /* Atur tinggi maksimum yang besar untuk memperlihatkan menu */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #welcome {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Menu Hamburger */
+nav .menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+}

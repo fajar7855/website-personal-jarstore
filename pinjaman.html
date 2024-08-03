@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinjaman - JARSTORE</title>
+    <link rel="stylesheet" href="pinjaman.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">JARSTORE</h2>
+            <nav>
+                <span class="menu-toggle">☰</span>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="paket-data.html">Paket Data</a></li>
+                    <li><a href="pulsa.html">Pulsa</a></li>
+                    <li><a href="pinjaman.html" class="active">Pinjaman</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section id="loan-examples">
+                <h2>Daftar Pinjaman</h2>
+                <div class="loan-grid">
+                    <div class="loan-item">
+                        <h3>Pinjam Rp 50.000</h3>
+                        <p>1 minggu: Rp 60.000</p>
+                        <p>2 minggu: Rp 70.000</p>
+                        <p>3 minggu: Rp 80.000</p>
+                        <p>4 minggu: Rp 90.000</p>
+                    </div>
+                    <div class="loan-item">
+                        <h3>Pinjam Rp 100.000</h3>
+                        <p>1 minggu: Rp 110.000</p>
+                        <p>2 minggu: Rp 120.000</p>
+                        <p>3 minggu: Rp 140.000</p>
+                        <p>4 minggu: Rp 160.000</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="apply-loan">
+                <h2>Ajukan Pinjaman</h2>
+                <p>Ajukan pinjaman dengan proses yang mudah dan cepat. Masukkan jumlah pinjaman, durasi, nama, bank, dan nomor rekening:</p>
+                <form id="loan-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bank">Bank:</label>
+                        <input type="text" id="bank" name="bank" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="account-number">Nomor Rekening:</label>
+                        <input type="text" id="account-number" name="account-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Jumlah Pinjaman:</label>
+                        <input type="number" id="amount" name="amount" min="50000" step="50000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Durasi (minggu):</label>
+                        <input type="number" id="duration" name="duration" min="1" max="4" required>
+                    </div>
+                    <button type="button" class="apply-button" onclick="calculateLoan()">Hitung</button>
+                </form>
+                <div id="result"></div>
+                <p class="note">Keterangan: Jika terlambat 1 hari, dikenakan biaya Rp 1.000.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JARSTORE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="pinjaman.js"></script>
+</body>
+</html>
